@@ -1,0 +1,13 @@
+project:
+  root_dir: "../"
+
+paths:
+  data_file: "data/Housing.csv"
+  model_file: "models/best_model.pkl"
+
+model:
+  hyperparameters:
+    learning_rate_range: [0.01, 0.5]
+    n_estimators_range: [50, 300]
+    max_depth_range: [3, 10]
+    bayes_iterations: 10
