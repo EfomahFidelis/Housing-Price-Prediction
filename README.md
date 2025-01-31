@@ -67,18 +67,50 @@ To run this project, you will need the following installed on your machine:
 
 ### Setting Up the Environment
 
-1.  **Clone the Repository:**
+1. **Setting Up a Virtual Environment:**
+Using venv:
 
-    ```bash
+```bash
+    python3 -m venv venv
+    source venv/bin/activate  # On macOS and Linux
+    .\venv\Scripts\activate   # On Windows
+```
+
+Using conda:
+
+```bash
+    conda create -n housing-price-prediction python=3.8
+    conda activate housing-price-prediction
+```
+
+2. **Clone the Repository:**
+   
+ ```bash
     git clone <repository-url>
     cd housing-price-prediction
-    ```
+```
 
-2.  **Install Dependencies:**
-
-    ```bash
+3.  **Install Dependencies:**
+  
+```bash
     pip install -r requirements.txt
-    ```
+```
+Packages:
+
+```
+    Package      Version
+    ------------ -----------
+    numpy==2.1.3
+    pandas==2.2.3
+    matplotlib==3.9.2
+    seaborn==0.13.2
+    scikit-learn==1.5.2
+    lightgbm==4.5.0
+    xgboost==2.1.2
+    skopt==0.9.0
+    flask==3.1.0
+    yaml
+```
 
 ## Instructions to Run the Project
 
