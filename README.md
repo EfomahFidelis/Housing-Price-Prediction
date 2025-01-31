@@ -102,14 +102,14 @@ Navigate to the project directory and install the dependencies using pip:
 ```bash
     cd your-repo-name
     pip install -r requirements.txt
-```bash
+```
 
 #### Step 3: Train the Model:
 Run the train.py script to train the model:
 
 ```bash
     python train.py
-```bash
+```
 
 #### Expected output:
 
@@ -127,7 +127,7 @@ Run the predict_model.py script to start the API:
 
 ```bash
     python predict.py
-```bash
+```
 
 #### Expected output:
 * Serving Flask app 'predict_model'
@@ -139,19 +139,18 @@ Press CTRL+C to quit
 #### Step 5: Make a Prediction
 Use a tool like curl or Postman to send a POST request to http://127.0.0.1:5000/predict with a JSON payload containing the house details:
 
-```bash: Windows
+```bash: 
+
+Windows:
 
 Invoke-WebRequest -Uri http://127.0.0.1:5000/predict -Method Post -ContentType "application/json" -Body '{"area": 7420, "bedrooms": 4, "bathrooms": 2, "stories": 3, "mainroad": "yes", "guestroom": "no", "basement": "no", "hotwaterheating": "no", "airconditioning": "yes", "parking": 2, "prefarea": "yes", "furnishingstatus": "furnished"}'
 
-```bash : Linux
+Linux:
 curl -X POST -H "Content-Type: application/json" -d '{"area": 7420, "bedrooms": 4, "bathrooms": 2, "stories": 3, "mainroad": "yes", "guestroom": "no", "basement": "no", "hotwaterheating": "no", "airconditioning": "yes", "parking": 2, "prefarea": "yes", "furnishingstatus": "furnished"}' http://127.0.0.1:5000/predict
 
-```bash
+```
 
 #### Expected Output
 {"predicted_price": "$8,495,095.00"}
 
 Note: The actual house price for this input is $13,300,000. The predicted price is approximately 36% lower than the actual price.
-
-
-
